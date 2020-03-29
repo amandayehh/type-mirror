@@ -5,7 +5,7 @@ let mainText;
 let enter;
 let firstInput;
 
-let vscale = 20;
+let vscale = 16;
 
 let textArray = ["M", "O", "V", "E", "M", "E", "N", "T"];
 

@@ -1,24 +1,45 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Type Mirror</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <script src="sketch.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>Type Mirror</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-  <body>
-    <!-- hi -->
-    <div class="edit">
-      <div class="custom-input">
-        <input type="text" id="fname" name="fname" value="MOVEMENT" />
-        <img class="return" src="icons/return.png" alt="enter" />
+<script src="sketch.js"></script>
+
+<body>
+  <div class="container">
+    <main class="video"></main>
+    <div class="controls">
+      <div class="controls__input">
+        <input type="text" class="controls__input__text" id="fname" name="fname" value="MOVEMENT" />
+        <div class="controls__input__return"> Click to edit</div>
       </div>
-      <div class="prompt">Add your text</div>
+      
+      <div class="controls__snap">
+        <div class="controls__snap__outer">
+          <div class="controls__snap__inner"></div>
+        </div>
+      </div>
+
+      <div class="controls__color">
+        <div class="controls__color__swap">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="controls__color__swap__stroke" d="M20.5 15.8182C20.5 19.5404 17.5583 22.5 14 22.5C10.4417 22.5 7.5 19.5404 7.5 15.8182C7.5 14.8055 7.87787 13.6414 8.56432 12.3933C9.24353 11.1584 10.1686 9.94258 11.1261 8.85458C12.0794 7.77128 13.0374 6.8455 13.759 6.18946C13.8428 6.11329 13.9233 6.04088 14 5.97242C14.0767 6.04088 14.1572 6.11329 14.241 6.18946C14.9626 6.8455 15.9206 7.77128 16.8739 8.85458C17.8314 9.94258 18.7565 11.1584 19.4357 12.3933C20.1221 13.6414 20.5 14.8055 20.5 15.8182Z" stroke-width="3"/>
+            <path id="controls__color__swap__fill" d="M14 24C18.4183 24 22 20.3369 22 15.8182C22 10.3636 14 4 14 4V24Z" />
+            </svg>
+             </div>
+        <div class="controls__color__divider"></div>
+        <div class="controls__color__reroll">Reroll Color</div>
+      </div>
     </div>
-  </body>
+  </div>
+
+</body>
+
 </html>

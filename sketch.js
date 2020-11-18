@@ -40,7 +40,6 @@ function setup() {
     width = 1000; 
   }
   height = width * 0.7;
-  console.log(width,height)
 
   cnv = createCanvas(width, height);
   // var x = (windowWidth - width) / 2;
@@ -48,11 +47,14 @@ function setup() {
   // cnv.position(x, y);
   backgroundColor = "#3C4548"; 
   foregroundColor = "#FF3981";
-  
+
+
   pixelDensity(1);
   video = createCapture(VIDEO);
   video.size(1100 / vscale, 800 / vscale);
   video.hide();
+   //move image by the width of image to the left
+
   inp = select("input");
   enter = select(".controls__input__return");
   snap = select(".controls__snap");
@@ -70,35 +72,44 @@ function setup() {
 }
 
 function draw() {
-  inp.input(inputEvent);
 
-  if (mainText != undefined) {
-    if (keyIsDown(13)) {
-      changeText();
-    }
-    enter.mousePressed(changeText);
-  }
+  // if (mainText != undefined) {
+  //   if (keyIsDown(13)) {
+
+  //     changeText();
+
+  //   }
+  //   enter.mousePressed(changeText);
+  // }
   snap.mousePressed(download);
 
   reroll.mousePressed(changeColor);
   swap.mousePressed(swapColor);
 
+   if (keyIsDown(13)) {
+     print("hi");
+     textArray = inp.value().split("");
 
-  if ($("input").is(":focus")) {
-    if (firstInput) {
-      if (keyIsPressed) {
-        inp.value(key);
-        firstInput = false;
-      }
-    }
   }
+  // if ($("input").is(":focus")) {
+  //   if (firstInput) {
+  //     if (keyIsPressed) {
+  //       inp.value(key);
+  //       console.log("enter")
+  //       console.log(inp)
+
+  //       console.log(inp.value())
+  //       firstInput = false;
+  //     }
+  //   }
+  // }
 
   background(backgroundColor);
   video.loadPixels();
   loadPixels();
   for (let y = 0; y < video.height; y++) {
     for (let x = 0; x < video.width; x++) {
-      let index = (x + y * video.width) * 4;
+      let index = ((x*-1) + y * video.width) * 4;
 
       let r = video.pixels[index + 0];
       let g = video.pixels[index + 1];
@@ -124,6 +135,7 @@ function draw() {
 }
 
 function inputEvent() {
+  console.log(this.value())
   mainText = this.value();
 }
 
@@ -140,7 +152,7 @@ function changeColor() {
   previousColors = selectedColors;
   
   selectedColors = random(colors);
-  while (selectedColors == previousColors) {
+  while (selectedColors == previousColors ||selectedColors[0]==previousColors[1]) {
     selectedColors = random(colors);
   }
   let r = random(0,1);
@@ -161,6 +173,7 @@ function changeColor() {
 
 function swapColor() {
   cacheForeground = foregroundColor;
+
   foregroundColor = backgroundColor;
   backgroundColor = cacheForeground;
 

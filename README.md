@@ -6,7 +6,7 @@
     <a href="https://amandayehh.github.io/type-mirror/">
       <img src="https://i.imgur.com/mBVumBZ.png" width="100" alt="Try Out Type Mirror">
     </a>
-        <p align="center">Licensed under GPL-3.0. This program is free sotfware<p>
+        <p align="center">Licensed under GPL-3.0. This program is free sotfware.<p>
   </p>
 </h1>
   

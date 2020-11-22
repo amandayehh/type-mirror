@@ -136,16 +136,13 @@ input[type="text"]:hover::first-line {
 }
 
 .controls__snap__inner {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     background-color: var(--color-second);
 }
 
 
-.controls__snap:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
 
 
 

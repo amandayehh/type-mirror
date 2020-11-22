@@ -6,11 +6,7 @@
     <a href="https://amandayehh.github.io/type-mirror/">
       <img src="https://i.imgur.com/mBVumBZ.png" width="100" alt="Try Out Type Mirror">
     </a>
-        <p>Copyright 2020 Amanda Yeh</p>
-        <p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.</p>
+        <p align="center">Licensed under GPL-3.0. This program is free sotfware<p>
   </p>
-
-
-
 </h1>
   

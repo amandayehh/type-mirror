@@ -1,6 +1,6 @@
 <p align="center">
   <img align="center" src="https://media4.giphy.com/media/I27QNkqaD5XPb4YizD/giphy.gif" width="300" alt="Type mirror demo">
-  <h1 align="center">Type Mirror</h1>
+  <p align="center"> <b>Type Mirror</em></b>
   <p align="center">A mirror made of typography</p>
   <p align="center">
     <a href="https://amandayehh.github.io/type-mirror/">

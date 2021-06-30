@@ -21,7 +21,7 @@ let cacheForeground;
 let backgroundColor;
 let foregroundColor;
 
-let vscale = 12;
+let vscale = 20;
 
 let textArray = ["M", "O", "V", "E", "M", "E", "N", "T"];
 
@@ -87,7 +87,6 @@ function draw() {
   swap.mousePressed(swapColor);
 
    if (keyIsDown(13)) {
-     print("hi");
      textArray = inp.value().split("");
 
   }
